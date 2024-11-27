@@ -390,7 +390,7 @@ const HomePage = ({ companyName, imageUrl }) => {
               cursus velit.
             </p>
           </div>
-          
+
           <div className="row">
             <div className="col-md-3 col-sm-3 col-xs-12">
               <div className="clients-grid">
