@@ -381,7 +381,6 @@ const HomePage = ({ companyName, imageUrl }) => {
     return (
       <section className="section-padding-70 clients white">
         <div className="container">
-          {/* Title Section */}
           <div className="main-heading text-center">
             <h2>Our Partners</h2>
             <p>
@@ -391,9 +390,7 @@ const HomePage = ({ companyName, imageUrl }) => {
               cursus velit.
             </p>
           </div>
-          {/* End Title Section */}
-
-          {/* Row */}
+          
           <div className="row">
             <div className="col-md-3 col-sm-3 col-xs-12">
               <div className="clients-grid">
@@ -432,9 +429,7 @@ const HomePage = ({ companyName, imageUrl }) => {
               </div>
             </div>
           </div>
-          {/* Row End */}
         </div>
-        {/* End Container */}
       </section>
     );
   };
@@ -475,7 +470,7 @@ const HomePage = ({ companyName, imageUrl }) => {
   return (
     <>
       <TopMenu />
-      <MainMenu companyName={companyName} imageUrl={imageUrl} />
+      <MainMenu companyName={companyName} imageUrl={imageUrl} page="home" />
       <HomePageSlider />
       <TrackYourShipment />
       <OurProcess />
