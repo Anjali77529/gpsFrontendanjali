@@ -117,14 +117,14 @@ const CurrentCp = ({ companyName, imageUrl, page }) => {
                     </li>
                   ) : (
                     <li className="dropdown  hidden-sm">
-                      <a
+                      <Link to="/"
                         className="dropdown-toggle"
                         data-hover="dropdown"
                         data-toggle="dropdown"
                         data-animations="fadeInUp"
                       >
                         Blog <span className="fa fa-angle-down"></span>
-                      </a>
+                      </Link>
                       <ul className="dropdown-menu">
                         <li>
                           <Link to="blog-3.html">Masonry Grid</Link>{" "}
@@ -145,26 +145,26 @@ const CurrentCp = ({ companyName, imageUrl, page }) => {
                   {/* <li className="hidden-sm"><a href="gallery.html">Gallery</a></li> */}
 
                   {/* 
-                                <li className="dropdown"> <a className="dropdown-toggle" data-hover="dropdown" data-toggle="dropdown" data-animations="fadeInUp">Pages <span className="fa fa-angle-down"></span></a>
-                                    <ul className="dropdown-menu">
-                                        <li><a href="404.html">Error Page</a> </li>
-                                        <li><a href="team.html">Our Team </a> </li>
-                                        <li><a href="icons.html">Icons</a> </li>
-                                        <li><a href="flat-icons.html">Flat Icons</a> </li>
-                                        <li><a href="gallery.html">Gallery</a></li>
-                                        <li><a href="login.html">Sign In</a></li>
-                                        <li><a href="sign-up.html">Sign Up</a></li>
-                                        <li><a href="profile.html">Profile</a></li>
-                                    </ul>
-                                </li>
-                              <li className="dropdown"> <a className="dropdown-toggle" data-hover="dropdown" data-toggle="dropdown" data-animations="fadeInUp">Cargo Tracking <span className="fa fa-angle-down"></span></a>
-                                    <ul className="dropdown-menu">
-                                        <li><a href="index-5.html">Tracking Landing Page</a> </li>
-                                        <li><a href="index-6.html">Tracking Classic Page </a> </li>
-                                        <li><a href="history.html">Tracking Order History</a> </li>
-                                        <li><a href="online-booking.html">Cargo Booking</a> </li>
-                                    </ul>
-                                </li> */}
+                    <li className="dropdown"> <a className="dropdown-toggle" data-hover="dropdown" data-toggle="dropdown" data-animations="fadeInUp">Pages <span className="fa fa-angle-down"></span></a>
+                        <ul className="dropdown-menu">
+                            <li><a href="404.html">Error Page</a> </li>
+                            <li><a href="team.html">Our Team </a> </li>
+                            <li><a href="icons.html">Icons</a> </li>
+                            <li><a href="flat-icons.html">Flat Icons</a> </li>
+                            <li><a href="gallery.html">Gallery</a></li>
+                            <li><a href="login.html">Sign In</a></li>
+                            <li><a href="sign-up.html">Sign Up</a></li>
+                            <li><a href="profile.html">Profile</a></li>
+                        </ul>
+                    </li>
+                  <li className="dropdown"> <a className="dropdown-toggle" data-hover="dropdown" data-toggle="dropdown" data-animations="fadeInUp">Cargo Tracking <span className="fa fa-angle-down"></span></a>
+                        <ul className="dropdown-menu">
+                            <li><a href="index-5.html">Tracking Landing Page</a> </li>
+                            <li><a href="index-6.html">Tracking Classic Page </a> </li>
+                            <li><a href="history.html">Tracking Order History</a> </li>
+                            <li><a href="online-booking.html">Cargo Booking</a> </li>
+                        </ul>
+                    </li> */}
                 </ul>
                 <Link
                   to="online-booking.html"
