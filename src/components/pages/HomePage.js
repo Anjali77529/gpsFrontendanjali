@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import TopMenu from "../header/TopMenu";
-import MainMenu from "../header/MainMenu";
 import HomePageSlider from "../slider/HomePageSlider";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
