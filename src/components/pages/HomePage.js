@@ -6,6 +6,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Footer from "../footer/Footer.js";
 import { Link } from "react-router-dom";
+import MainMenu from "../header/MainMenu.js";
 
 const HomePage = ({ companyName, imageUrl }) => {
   const OurProcess = () => {
@@ -469,7 +470,8 @@ const HomePage = ({ companyName, imageUrl }) => {
   return (
     <>
       <TopMenu />
-      <MainMenu companyName={companyName} imageUrl={imageUrl} page="home" />
+      {/* <MainMenu companyName={companyName} imageUrl={imageUrl} page="home" /> */}
+      <MainMenu />
       <HomePageSlider />
       <TrackYourShipment />
       <OurProcess />

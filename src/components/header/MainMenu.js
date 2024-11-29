@@ -67,17 +67,26 @@ const CurrentCp = ({ companyName, imageUrl, page }) => {
                   <span className="icon-bar"></span>
                 </button>
               </div>
-             
+
               <div className="collapse navbar-collapse" id="main-navigation">
                 <ul className="nav navbar-nav">
-                  
-                  <li className={`hidden-sm ${page === "home" ? "active" : ""}`}>
+                  <li
+                    className={`hidden-sm ${page === "home" ? "active" : ""}`}
+                  >
                     <Link to="/">Home</Link>
                   </li>
 
-
-                  <li className={`dropdown  hidden-sm ${page === "about" ? "active" : ""}`}>
-                    <Link className="dropdown-toggle" data-hover="dropdown" data-toggle="dropdown" data-animations="fadeInUp">
+                  <li
+                    className={`dropdown  hidden-sm ${
+                      page === "about" ? "active" : ""
+                    }`}
+                  >
+                    <Link
+                      className="dropdown-toggle"
+                      data-hover="dropdown"
+                      data-toggle="dropdown"
+                      data-animations="fadeInUp"
+                    >
                       About US <span class="fa fa-angle-down"></span>
                     </Link>
                     <ul class="dropdown-menu">
@@ -90,29 +99,40 @@ const CurrentCp = ({ companyName, imageUrl, page }) => {
                     </ul>
                   </li>
 
-
-                  <li className={`hidden-sm ${page === "service" ? "active" : ""}`}>
-                    <Link to="/">Service</Link>
+                  <li
+                    className={`hidden-sm ${
+                      page === "service" ? "active" : ""
+                    }`}
+                  >
+                    <Link to="/services">Service</Link>
                   </li>
 
                   <li className={`hidden-sm ${page === "faq" ? "active" : ""}`}>
                     <Link to="/">FAQ</Link>
                   </li>
 
-                  <li className={`hidden-sm ${page === "blog" ? "active" : ""}`}>
-                    <Link to="/">Blog</Link>
+                  <li
+                    className={`dropdown  hidden-sm ${
+                      page === "about" ? "active" : ""
+                    }`}
+                  >
+                    <Link
+                      className="dropdown-toggle"
+                      data-hover="dropdown"
+                      data-toggle="dropdown"
+                      data-animations="fadeInUp"
+                    >
+                      Blog <span class="fa fa-angle-down"></span>
+                    </Link>
+                    <ul class="dropdown-menu">
+                      <li>
+                        <Link to="/blog">Blog</Link>{" "}
+                      </li>
+                      <li>
+                        <Link to="/blogdetails">Blog Details</Link>{" "}
+                      </li>
+                    </ul>
                   </li>
-
-
-                  
-
-
-                  
-                    
-
-                  
-
-                 
 
                   {/* 
                     <li className="dropdown"> <a className="dropdown-toggle" data-hover="dropdown" data-toggle="dropdown" data-animations="fadeInUp">Pages <span className="fa fa-angle-down"></span></a>
@@ -129,7 +149,12 @@ const CurrentCp = ({ companyName, imageUrl, page }) => {
                     </li>
                   */}
                 </ul>
-                <Link to="online-booking.html" className="btn btn-primary pull-right">Pricing</Link>{" "}
+                <Link
+                  to="online-booking.html"
+                  className="btn btn-primary pull-right"
+                >
+                  Pricing
+                </Link>{" "}
               </div>
             </div>
           </nav>
