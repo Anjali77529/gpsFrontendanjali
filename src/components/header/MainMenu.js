@@ -82,7 +82,7 @@ const CurrentCp = ({ companyName, imageUrl, page }) => {
                     </Link>
                     <ul class="dropdown-menu">
                       <li>
-                        <Link to="/">About US</Link>{" "}
+                        <Link to="/about">About US</Link>{" "}
                       </li>
                       <li>
                         <Link to="/">Branches</Link>{" "}
@@ -91,15 +91,15 @@ const CurrentCp = ({ companyName, imageUrl, page }) => {
                   </li>
 
 
-                  <li className={`hidden-sm ${page === "home" ? "active" : ""}`}>
+                  <li className={`hidden-sm ${page === "service" ? "active" : ""}`}>
                     <Link to="/">Service</Link>
                   </li>
 
-                  <li className={`hidden-sm ${page === "home" ? "active" : ""}`}>
+                  <li className={`hidden-sm ${page === "faq" ? "active" : ""}`}>
                     <Link to="/">FAQ</Link>
                   </li>
 
-                  <li className={`hidden-sm ${page === "home" ? "active" : ""}`}>
+                  <li className={`hidden-sm ${page === "blog" ? "active" : ""}`}>
                     <Link to="/">Blog</Link>
                   </li>
 
