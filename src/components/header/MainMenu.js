@@ -67,82 +67,52 @@ const CurrentCp = ({ companyName, imageUrl, page }) => {
                   <span className="icon-bar"></span>
                 </button>
               </div>
-
+             
               <div className="collapse navbar-collapse" id="main-navigation">
                 <ul className="nav navbar-nav">
-                  {/* Home Page Route */}
-                  {page === "home" ? (
-                    <li className="hidden-sm active">
-                      <Link to="/">Home</Link>
-                    </li>
-                  ) : (
-                    <li className="hidden-sm">
-                      <Link to="/">Home</Link>
-                    </li>
-                  )}
+                  
+                  <li className={`hidden-sm ${page === "home" ? "active" : ""}`}>
+                    <Link to="/">Home</Link>
+                  </li>
 
-                  {/* About Page Route */}
-                  {page === "about" ? (
-                    <li className="hidden-sm active">
-                      <Link to="/">About</Link>
-                    </li>
-                  ) : (
-                    <li className="hidden-sm">
-                      <Link to="/">About</Link>
-                    </li>
-                  )}
 
-                  {page === "home" ? (
-                    <li className="hidden-sm active">
-                      <Link to="/">Our vehicles</Link>
-                    </li>
-                  ) : (
-                    <li className="hidden-sm">
-                      <Link to="/">Our vehicles</Link>
-                    </li>
-                  )}
-                  {page === "home" ? (
-                    <li className="hidden-sm active">
-                      <Link to="/">Pricing</Link>
-                    </li>
-                  ) : (
-                    <li className="hidden-sm">
-                      <Link to="/">Pricing</Link>
-                    </li>
-                  )}
+                  <li className={`dropdown  hidden-sm ${page === "about" ? "active" : ""}`}>
+                    <Link className="dropdown-toggle" data-hover="dropdown" data-toggle="dropdown" data-animations="fadeInUp">
+                      About US <span class="fa fa-angle-down"></span>
+                    </Link>
+                    <ul class="dropdown-menu">
+                      <li>
+                        <Link to="/">About US</Link>{" "}
+                      </li>
+                      <li>
+                        <Link to="/">Branches</Link>{" "}
+                      </li>
+                    </ul>
+                  </li>
 
-                  {page === "home" ? (
-                    <li className="hidden-sm active">
-                      <Link to="/">Pricing</Link>
-                    </li>
-                  ) : (
-                    <li className="dropdown  hidden-sm">
-                      <Link to="/"
-                        className="dropdown-toggle"
-                        data-hover="dropdown"
-                        data-toggle="dropdown"
-                        data-animations="fadeInUp"
-                      >
-                        Blog <span className="fa fa-angle-down"></span>
-                      </Link>
-                      <ul className="dropdown-menu">
-                        <li>
-                          <Link to="blog-3.html">Masonry Grid</Link>{" "}
-                        </li>
-                      </ul>
-                    </li>
-                  )}
-                  {/* <li className="dropdown "> <a className="dropdown-toggle" data-hover="dropdown" data-toggle="dropdown" data-animations="fadeInUp">Our Service <span className="fa fa-angle-down"></span></a>
-                                    <ul className="dropdown-menu">
-                                        <li><a href="services.html">Services</a> </li>
-                                        <li><a href="services-2.html">Services 2</a> </li>
-                                        <li><a href="services-3.html">Services 3</a> </li>
-                                        <li><a href="services-4.html">Services 4 (Sticky Bar)</a> </li>
-                                        <li><a href="services-details.html">Services Detail</a> </li>
-                                    </ul>
-                                </li> */}
 
-                  {/* <li className="hidden-sm"><a href="gallery.html">Gallery</a></li> */}
+                  <li className={`hidden-sm ${page === "home" ? "active" : ""}`}>
+                    <Link to="/">Service</Link>
+                  </li>
+
+                  <li className={`hidden-sm ${page === "home" ? "active" : ""}`}>
+                    <Link to="/">FAQ</Link>
+                  </li>
+
+                  <li className={`hidden-sm ${page === "home" ? "active" : ""}`}>
+                    <Link to="/">Blog</Link>
+                  </li>
+
+
+                  
+
+
+                  
+                    
+
+                  
+
+                 
 
                   {/* 
                     <li className="dropdown"> <a className="dropdown-toggle" data-hover="dropdown" data-toggle="dropdown" data-animations="fadeInUp">Pages <span className="fa fa-angle-down"></span></a>
@@ -157,21 +127,9 @@ const CurrentCp = ({ companyName, imageUrl, page }) => {
                             <li><a href="profile.html">Profile</a></li>
                         </ul>
                     </li>
-                  <li className="dropdown"> <a className="dropdown-toggle" data-hover="dropdown" data-toggle="dropdown" data-animations="fadeInUp">Cargo Tracking <span className="fa fa-angle-down"></span></a>
-                        <ul className="dropdown-menu">
-                            <li><a href="index-5.html">Tracking Landing Page</a> </li>
-                            <li><a href="index-6.html">Tracking Classic Page </a> </li>
-                            <li><a href="history.html">Tracking Order History</a> </li>
-                            <li><a href="online-booking.html">Cargo Booking</a> </li>
-                        </ul>
-                    </li> */}
+                  */}
                 </ul>
-                <Link
-                  to="online-booking.html"
-                  className="btn btn-primary pull-right"
-                >
-                  Book Now
-                </Link>{" "}
+                <Link to="online-booking.html" className="btn btn-primary pull-right">Pricing</Link>{" "}
               </div>
             </div>
           </nav>
