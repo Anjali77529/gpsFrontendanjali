@@ -7,17 +7,18 @@ function App() {
   return (
     <Router>
       <Routes>
-        {/* Route for HomePage */}
+      
+       
         <Route
           path="/"
           element={<HomePage companyName="Gravity Drive" imageUrl="images/logo.png" />}
         />
-
-        {/* Route for AboutUs */}
-        <Route
+         <Route
           path="/about"
           element={<AboutUs companyName="Gravity Drive" imageUrl="images/logo.png" />}
         />
+        
+        
       </Routes>
     </Router>
   );
