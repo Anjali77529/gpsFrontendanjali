@@ -169,69 +169,68 @@ const AboutUs = ({ companyName, imageUrl }) => {
               </div>
 
               <div className="col-md-5 col-sm-12 col-xs-12">
-              <div className="accordion-box style-one">
-                <div className="faqs-title">
-                  <h3>Need help</h3>
-                  <h2>Frequently Asked Questions</h2>
-                  <p>
-                    Ut consequat velit a metus accumsan, vel tempor nulla
-                    blandit. Integer euismod magna vel mi congue suscipit.
-                  </p>
-                </div>
+                <div className="accordion-box style-one">
+                  <div className="faqs-title">
+                    <h3>Need help</h3>
+                    <h2>Frequently Asked Questions</h2>
+                    <p>
+                      Ut consequat velit a metus accumsan, vel tempor nulla
+                      blandit. Integer euismod magna vel mi congue suscipit.
+                    </p>
+                  </div>
 
-                <div className="accordion">
-                  {[
-                    {
-                      question: "What is a freight forwarder?",
-                      answer:
-                        "A freight forwarder organizes shipments for individuals or corporations to get goods from the manufacturer or producer to a market, customer, or final point of distribution.",
-                    },
-                    {
-                      question: "Why are the shipping rates so volatile?",
-                      answer:
-                        "Shipping rates fluctuate due to factors such as fuel prices, demand and supply, seasonal trends, and geopolitical conditions.",
-                    },
-                    {
-                      question: "What are the methods of payment?",
-                      answer:
-                        "Common payment methods include bank transfers, credit card payments, and sometimes cash on delivery depending on the service.",
-                    },
-                  ].map((item, index) => (
-                    <div
-                      key={index}
-                      className={`accordion-block ${
-                        activeIndex === index ? "active" : ""
-                      }`}
-                    >
+                  <div className="accordion">
+                    {[
+                      {
+                        question: "What is a freight forwarder?",
+                        answer:
+                          "A freight forwarder organizes shipments for individuals or corporations to get goods from the manufacturer or producer to a market, customer, or final point of distribution.",
+                      },
+                      {
+                        question: "Why are the shipping rates so volatile?",
+                        answer:
+                          "Shipping rates fluctuate due to factors such as fuel prices, demand and supply, seasonal trends, and geopolitical conditions.",
+                      },
+                      {
+                        question: "What are the methods of payment?",
+                        answer:
+                          "Common payment methods include bank transfers, credit card payments, and sometimes cash on delivery depending on the service.",
+                      },
+                    ].map((item, index) => (
                       <div
-                        className="accord-btn"
-                        onClick={() => toggleAccordion(index)}
-                      >
-                        <h4>{item.question}</h4>
-                      </div>
-                      <div
-                        className={`accord-content ${
-                          activeIndex === index ? "expanded" : "collapsed"
+                        key={index}
+                        className={`accordion-block ${
+                          activeIndex === index ? "active" : ""
                         }`}
-                        style={{
-                          display: activeIndex === index ? "block" : "none",
-                        }}
                       >
-                        <p>{item.answer}</p>
+                        <div
+                          className="accord-btn"
+                          onClick={() => toggleAccordion(index)}
+                        >
+                          <h4>{item.question}</h4>
+                        </div>
+                        <div
+                          className={`accord-content ${
+                            activeIndex === index ? "expanded" : "collapsed"
+                          }`}
+                          style={{
+                            display: activeIndex === index ? "block" : "none",
+                          }}
+                        >
+                          <p>{item.answer}</p>
+                        </div>
                       </div>
-                    </div>
-                  ))}
+                    ))}
+                  </div>
                 </div>
               </div>
-            </div>
-
             </div>
           </div>
         </section>
       </>
     );
   };
-  
+
   const FounderWords = () => {
     return (
       <>

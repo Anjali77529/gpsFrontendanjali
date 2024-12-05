@@ -1,7 +1,33 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 
 const Footer = () => {
+  const [companyDetails, setCompanyDetails] = useState(null);
+
+  useEffect(() => {
+    const fetchCompanyDetails = async () => {
+      try {
+        const response = await fetch(
+          "http://localhost:5000/api/companyDetails",
+          {
+            method: "GET",
+            headers: {
+              "Content-Type": "application/json",
+            },
+          }
+        );
+        if (!response.ok) {
+          throw new Error(`Error: ${response.status} - ${response.statusText}`);
+        }
+        const data = await response.json();
+        setCompanyDetails(data[0]); // Assuming the API response is an array and we need the first item.
+      } catch (error) {
+        console.error("Error fetching company details:", error);
+      }
+    };
+
+    fetchCompanyDetails();
+  }, []);
   return (
     <>
       <footer className="footer-area">
@@ -26,19 +52,19 @@ const Footer = () => {
                       <ul className="contact-info">
                         <li>
                           <span className="icon fa fa-map-marker"></span> 60
-                          Link Road Lhr. Pakistan 54770
+                          {companyDetails?.address}
                         </li>
                         <li>
-                          <span className="icon fa fa-phone"></span> (042)
-                          1234567890
+                          <span className="icon fa fa-phone"></span>
+                          {companyDetails?.numbers?.[1]}
                         </li>
                         <li>
                           <span className="icon fa fa-envelope-o"></span>{" "}
-                          contact@scriptsbundle.com
+                          {companyDetails?.emails?.[1]}
                         </li>
                         <li>
-                          <span className="icon fa fa-fax"></span> (042) 1234
-                          7777
+                          <span className="icon fa fa-fax"></span>
+                          {companyDetails?.numbers?.[0]}
                         </li>
                       </ul>
                       <div className="social-links-two clearfix">

@@ -2,6 +2,7 @@ import React from "react";
 import TopMenu from "../header/TopMenu";
 import MainMenu from "../header/MainMenu";
 import Footer from "../footer/Footer";
+import { Link } from "react-router-dom";
 
 const BlogSection = ({ companyName, imageUrl }) => {
   return (
@@ -127,7 +128,7 @@ const CommentsSection = () => (
               <strong>Arslan Tariq</strong>
               <ul className="list-inline pull-right">
                 <li>
-                  <a href="#">22 Feb 2016</a>
+                  <Link to="#">22 Feb 2016</Link>
                 </li>
               </ul>
             </div>

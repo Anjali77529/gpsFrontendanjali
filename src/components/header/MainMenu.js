@@ -1,7 +1,34 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 
 const CurrentCp = ({ companyName, imageUrl, page }) => {
+  const [companyDetails, setCompanyDetails] = useState(null);
+
+  useEffect(() => {
+    const fetchCompanyDetails = async () => {
+      try {
+        const response = await fetch(
+          "http://localhost:5000/api/companyDetails",
+          {
+            method: "GET",
+            headers: {
+              "Content-Type": "application/json",
+            },
+          }
+        );
+        if (!response.ok) {
+          throw new Error(`Error: ${response.status} - ${response.statusText}`);
+        }
+        const data = await response.json();
+        setCompanyDetails(data[0]); // Assuming the API response is an array and we need the first item.
+      } catch (error) {
+        console.error("Error fetching company details:", error);
+      }
+    };
+
+    fetchCompanyDetails();
+  }, []);
+
   return (
     <>
       <header className="header-area">
@@ -18,13 +45,13 @@ const CurrentCp = ({ companyName, imageUrl, page }) => {
             </div>
 
             <div className="information-content">
-              <div className="info-box  hidden-sm">
+              <div className="info-box hidden-sm">
                 <div className="icon">
                   <span className="icon-envelope"></span>
                 </div>
                 <div className="text">EMAIL</div>
-                <Link to="mailt:contact@scriptsbundle.com">
-                  contact@scriptsbundle.com
+                <Link to="mailto:contact@scriptsbundle.com">
+                  {companyDetails?.emails?.[0]}
                 </Link>{" "}
               </div>
 
@@ -34,7 +61,7 @@ const CurrentCp = ({ companyName, imageUrl, page }) => {
                 </div>
                 <div className="text">Call Now</div>
                 <Link className="location" to="#">
-                  (92) 123-456-78
+                  {companyDetails?.numbers?.[0]}
                 </Link>
               </div>
               <div className="info-box">
@@ -43,7 +70,7 @@ const CurrentCp = ({ companyName, imageUrl, page }) => {
                 </div>
                 <div className="text">Find Us</div>
                 <Link className="location" to="#">
-                  Model Town, Pakistan{" "}
+                  {companyDetails?.address}
                 </Link>{" "}
               </div>
             </div>
@@ -51,7 +78,7 @@ const CurrentCp = ({ companyName, imageUrl, page }) => {
         </div>
 
         <div className="navigation-2">
-          <nav className="navbar navbar-default ">
+          <nav className="navbar navbar-default">
             <div className="container">
               <div className="navbar-header">
                 <button
@@ -77,7 +104,7 @@ const CurrentCp = ({ companyName, imageUrl, page }) => {
                   </li>
 
                   <li
-                    className={`dropdown  hidden-sm ${
+                    className={`dropdown hidden-sm ${
                       page === "about" ? "active" : ""
                     }`}
                   >
@@ -87,9 +114,9 @@ const CurrentCp = ({ companyName, imageUrl, page }) => {
                       data-toggle="dropdown"
                       data-animations="fadeInUp"
                     >
-                      About US <span class="fa fa-angle-down"></span>
+                      About US <span className="fa fa-angle-down"></span>
                     </Link>
-                    <ul class="dropdown-menu">
+                    <ul className="dropdown-menu">
                       <li>
                         <Link to="/about">About US</Link>{" "}
                       </li>
@@ -108,11 +135,11 @@ const CurrentCp = ({ companyName, imageUrl, page }) => {
                   </li>
 
                   <li className={`hidden-sm ${page === "faq" ? "active" : ""}`}>
-                    <Link to="/">FAQ</Link>
+                    <Link to="/faq">FAQ</Link>
                   </li>
 
                   <li
-                    className={`dropdown  hidden-sm ${
+                    className={`dropdown hidden-sm ${
                       page === "about" ? "active" : ""
                     }`}
                   >
@@ -122,9 +149,9 @@ const CurrentCp = ({ companyName, imageUrl, page }) => {
                       data-toggle="dropdown"
                       data-animations="fadeInUp"
                     >
-                      Blog <span class="fa fa-angle-down"></span>
+                      Blog <span className="fa fa-angle-down"></span>
                     </Link>
-                    <ul class="dropdown-menu">
+                    <ul className="dropdown-menu">
                       <li>
                         <Link to="/blog">Blog</Link>{" "}
                       </li>
@@ -133,21 +160,6 @@ const CurrentCp = ({ companyName, imageUrl, page }) => {
                       </li>
                     </ul>
                   </li>
-
-                  {/* 
-                    <li className="dropdown"> <a className="dropdown-toggle" data-hover="dropdown" data-toggle="dropdown" data-animations="fadeInUp">Pages <span className="fa fa-angle-down"></span></a>
-                        <ul className="dropdown-menu">
-                            <li><a href="404.html">Error Page</a> </li>
-                            <li><a href="team.html">Our Team </a> </li>
-                            <li><a href="icons.html">Icons</a> </li>
-                            <li><a href="flat-icons.html">Flat Icons</a> </li>
-                            <li><a href="gallery.html">Gallery</a></li>
-                            <li><a href="login.html">Sign In</a></li>
-                            <li><a href="sign-up.html">Sign Up</a></li>
-                            <li><a href="profile.html">Profile</a></li>
-                        </ul>
-                    </li>
-                  */}
                 </ul>
                 <Link
                   to="online-booking.html"

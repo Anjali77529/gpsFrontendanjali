@@ -5,6 +5,9 @@ import HomePage from "./components/pages/HomePage";
 import Services from "./components/pages/Services";
 import Blog from "./components/pages/Blog";
 import BlogSection from "./components/pages/BlogSection";
+import FaqAccordion from "./components/pages/Faq";
+// import "antd/dist/antd.css";
+import TruckRegistrationForm from "./components/pages/TruckDetails";
 
 function App() {
   return (
@@ -26,6 +29,8 @@ function App() {
         <Route path="/services" element={<Services />} />
         <Route path="/blog" element={<Blog />} />
         <Route path="/blogdetails" element={<BlogSection />} />
+        <Route path="/faq" element={<FaqAccordion />} />
+        <Route path="/truck_registration" element={<TruckRegistrationForm />} />
       </Routes>
     </Router>
   );
