@@ -4,7 +4,7 @@ import HomePageSlider from "../slider/HomePageSlider";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-
+import Footer from "../footer/Footer.js";
 import { Link } from "react-router-dom";
 import MainMenu from "../header/MainMenu.js";
 
@@ -469,7 +469,6 @@ const HomePage = () => {
 
   return (
     <>
-     
       <MainMenu page="home" />
       <HomePageSlider />
       <TrackYourShipment />
@@ -478,7 +477,7 @@ const HomePage = () => {
       <RequestForm />
       <Testimonial />
       <Clients />
-            
+      <Footer />
     </>
   );
 };
