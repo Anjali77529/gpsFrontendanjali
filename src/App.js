@@ -1,6 +1,6 @@
 import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import TopMenu from "./components/common/TopMenu"; // Add this import
+import TopMenu from "./components/header/TopMenu";
 import AboutUs from "./components/pages/AboutUs";
 import HomePage from "./components/pages/HomePage";
 import Services from "./components/pages/Services";
@@ -30,7 +30,7 @@ function App() {
         <Route path="/blog" element={<Blog />} />
         <Route path="/blogdetails" element={<BlogSection />} />
         <Route path="/faq" element={<FaqAccordion />} />
-        <Route path="/" element={<TruckRegistrationForm />} />
+        <Route path="/truck_registration" element={<TruckRegistrationForm />} />
       </Routes>
     </Router>
   );
