@@ -1,14 +1,14 @@
 import React, { useState } from "react";
-import TopMenu from "../header/TopMenu";
+
 import HomePageSlider from "../slider/HomePageSlider";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import Footer from "../footer/Footer.js";
+
 import { Link } from "react-router-dom";
 import MainMenu from "../header/MainMenu.js";
 
-const HomePage = ({ companyName, imageUrl }) => {
+const HomePage = () => {
   const OurProcess = () => {
     return (
       <>
@@ -469,9 +469,8 @@ const HomePage = ({ companyName, imageUrl }) => {
 
   return (
     <>
-      <TopMenu />
-      {/* <MainMenu companyName={companyName} imageUrl={imageUrl} page="home" /> */}
-      <MainMenu />
+     
+      <MainMenu page="home" />
       <HomePageSlider />
       <TrackYourShipment />
       <OurProcess />
@@ -479,7 +478,7 @@ const HomePage = ({ companyName, imageUrl }) => {
       <RequestForm />
       <Testimonial />
       <Clients />
-      <Footer />
+            
     </>
   );
 };

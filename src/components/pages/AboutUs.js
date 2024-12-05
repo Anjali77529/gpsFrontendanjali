@@ -1,10 +1,8 @@
 import React, { useState } from "react";
-import TopMenu from "../header/TopMenu";
 import MainMenu from "../header/MainMenu";
-import Footer from "../footer/Footer";
 import { Link } from "react-router-dom";
 
-const AboutUs = ({ companyName, imageUrl }) => {
+const AboutUs = () => {
   const HeaderBanner = () => {
     return (
       <>
@@ -271,6 +269,7 @@ const AboutUs = ({ companyName, imageUrl }) => {
       </>
     );
   };
+  
   const Facts = () => {
     return (
       <>
@@ -338,15 +337,15 @@ const AboutUs = ({ companyName, imageUrl }) => {
 
   return (
     <>
-      <TopMenu />
-      <MainMenu companyName={companyName} imageUrl={imageUrl} page="about" />
+      
+      <MainMenu page="about" />
       <HeaderBanner />
       <AboutBody />
       <MissionVission />
       <FounderWords />
       <Facts />
 
-      <Footer />
+      
     </>
   );
 };

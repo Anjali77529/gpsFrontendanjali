@@ -135,22 +135,9 @@ function Blog({ companyName, imageUrl }) {
 
   return (
     <>
-      <TopMenu />
-      <MainMenu companyName={companyName} imageUrl={imageUrl} page="about" />
-      <Breadcrumbs />
-      <section id="blog" className="custom-padding">
-        <div className="container">
-          <div className="row">
-            {blogPosts.map((post, idx) => (
-              <div className="col-md-4 col-sm-4 col-xs-12" key={idx}>
-                <BlogPost {...post} />
-              </div>
-            ))}
-          </div>
-          <Pagination />
-        </div>
-      </section>
-      <Footer />
+      <MainMenu page="blog" />
+      <HeaderBanner />
+      <BlogContent />
     </>
   );
 }

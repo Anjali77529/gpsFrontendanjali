@@ -120,9 +120,9 @@ const CurrentCp = ({ companyName, imageUrl, page }) => {
                       <li>
                         <Link to="/about">About US</Link>{" "}
                       </li>
-                      <li>
+                      {/* <li>
                         <Link to="/">Branches</Link>{" "}
-                      </li>
+                      </li> */}
                     </ul>
                   </li>
 
@@ -144,6 +144,7 @@ const CurrentCp = ({ companyName, imageUrl, page }) => {
                     }`}
                   >
                     <Link
+                      to="/services"
                       className="dropdown-toggle"
                       data-hover="dropdown"
                       data-toggle="dropdown"
@@ -156,7 +157,7 @@ const CurrentCp = ({ companyName, imageUrl, page }) => {
                         <Link to="/blog">Blog</Link>{" "}
                       </li>
                       <li>
-                        <Link to="/blogdetails">Blog Details</Link>{" "}
+                        <Link to="/">Branches</Link>{" "}
                       </li>
                     </ul>
                   </li>
